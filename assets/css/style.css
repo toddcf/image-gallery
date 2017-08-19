@@ -27,17 +27,26 @@ h1 {
 
 /* LINKS */
 a {
-	text-decoration: none;
-	font-size: 100%;
+	text-decoration: none; /* Remove automatic underlining. */
+	font-size: 100%; /* . . . of its container. */
 }
 
 a:link,
 a:visited {
 	color: #555;
+	border-bottom: 1px solid #555; /* Custom underline */
+	padding-bottom: 1px; /* Space for underline */
+	-webkit-transition: border-bottom 0.2s, color 0.2s;
+	transition: border-bottom 0.2s, color 0.2s; /* Transition takes 0.2 seconds. */
 }
 
 a:hover,
-a:active { color: #fff; }
+a:active {
+	color: #fff;
+	border-bottom: 1px solid transparent; /* Custom underline */
+}
+
+/* IMAGES */
 
 img {
 	width: 30%;
