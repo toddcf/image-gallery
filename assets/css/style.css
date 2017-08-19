@@ -25,11 +25,52 @@ h1 {
 	padding: 20px 0;
 }
 
+/* LINKS */
+a {
+	text-decoration: none;
+	font-size: 100%;
+}
+
+a:link,
+a:visited {
+	color: #555;
+}
+
+a:hover,
+a:active { color: #fff; }
+
 img {
 	width: 30%;
 	float: left;
 	margin: 1.66%;
+	-webkit-transition: -webkit-transform 1s, -webkit-filter 1s;
+			transition: -webkit-transform 1s, -webkit-filter 1s;
+			-o-transition: transform 1s, filter 1s;
+			transition: transform 1s, filter 1s;
+			transition: transform 1s, filter 1s, -webkit-transform 1s, -webkit-filter 1s;
+	-webkit-transform: scale(1.02);
+			-ms-transform: scale(1.02);
+	    transform: scale(1.02); /* No zoom when not hovering -- minus 2% zoom to eliminate bottom border. */
 }
+
+img:hover,
+img:active {
+	-webkit-filter: brightness(106%);
+	        filter: brightness(106%);
+	-webkit-transition: -webkit-filter 0.5s;
+			transition: -webkit-filter 0.5s;
+			-o-transition: filter 0.5s;
+			transition: filter 0.5s;
+			transition: filter 0.5s, -webkit-filter 0.5s;
+
+			transition: filter 1s, transform 1s;
+			transition: filter 1s, transform 1s, -webkit-filter 1s, -webkit-transform 1s;
+	-webkit-transform: scale(1.05);
+			-ms-transform: scale(1.05);
+	    transform: scale(1.05); /* When hovering, zoom in to 5%. */
+}
+
+/* FOOTER */
 
 footer {
 	background-color: #000;
@@ -40,7 +81,7 @@ footer {
 }
 
 .footer-text {
-	width: 50%;
+	width: 30%;
 	text-align: center;
 	color: #555;
 	margin: 0 auto;
@@ -53,8 +94,7 @@ footer {
 }
 
 .footer-text a {
-	font-size: 100%;
-	color: #555;
+	
 }
 
 /* MEDIA QUERIES */
